@@ -1,9 +1,12 @@
 .fraunces-title {
   font-family: 'Fraunces', serif;
-  font-size: 3rem;
+  font-size: 3.5rem;
   letter-spacing: 1px;
   font-weight: 600;
-  margin-bottom: 20px;
+  color: #f7ede2;
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 30px;
 }
 * {
   margin: 0;
@@ -114,4 +117,53 @@ footer {
   color: #9b7a87;
   background: #fff5f8;
   margin-top: 3rem;
+}
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 40px;
+  padding: 40px 60px;
+  position: relative;
+}
+
+.art-img {
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+  width: 100%;
+  height: auto;
+}
+
+.art-img:hover {
+  transform: scale(1.03);
+}
+
+/* Placement styles */
+.img-large {
+  grid-column: 1 / span 7;
+  grid-row: 1;
+}
+
+.img-medium {
+  grid-column: 6 / span 6;
+  grid-row: 2;
+  margin-top: 40px;
+}
+
+.img-small {
+  grid-column: 3 / span 4;
+  grid-row: 3;
+}
+
+/* Responsive for mobile */
+@media screen and (max-width: 768px) {
+  .gallery {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .art-img {
+    margin-bottom: 20px;
+  }
 }
