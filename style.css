@@ -1,0 +1,111 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+body {
+  background: #fff0f4;
+  color: #3e3e3e;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 2rem;
+  border-bottom: 1px solid #f2c5d3;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo img {
+  height: 50px;
+}
+
+nav a {
+  margin-left: 25px;
+  text-decoration: none;
+  color: #d88ba0;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.hero {
+  background: #ffe8ef;
+  text-align: center;
+  padding: 6rem 2rem 4rem;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #c66380;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #6e4b55;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.gallery {
+  padding: 4rem 2rem;
+  text-align: center;
+  background: #ffffff;
+}
+
+.gallery h2 {
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  color: #c66380;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
+}
+
+.item {
+  background: #ffeef4;
+  padding: 100px 0;
+  border-radius: 10px;
+  color: #a36d80;
+  font-weight: 500;
+  font-size: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.about, .contact {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.about h2, .contact h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #c66380;
+}
+
+.about p, .contact p {
+  max-width: 700px;
+  margin: 0 auto;
+  color: #5a4c52;
+  font-size: 1rem;
+}
+
+footer {
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #9b7a87;
+  background: #fff5f8;
+  margin-top: 3rem;
+}
