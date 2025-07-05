@@ -1,4 +1,10 @@
-
+.fraunces-title {
+  font-family: 'Fraunces', serif;
+  font-size: 3rem;
+  letter-spacing: 1px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
 * {
   margin: 0;
   padding: 0;
