@@ -7,6 +7,8 @@
   <link rel="icon" href="favicon.ico" type="image/x-icon"/>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces&family=Playfair+Display&display=swap" rel="stylesheet">
+
 </head>
 <body>
   <header>
@@ -23,22 +25,37 @@
   <section class="hero">
     <h1 class="fraunces-title">Welcome to Galervia</h1>
  <section id="gallery" class="gallery">
-    <img src="art1.jpg" class="art-img img-large top-left">
+ <div class="art-piece">
+  <img src="IMG_5327.JPG" alt="Almsot Ripe, Almost Gone" class="clickable-img art-img img-large top-left" />
+ </div>
     <img src="art2.jpg" class="art-img img-medium bottom-right">
     <img src="art3.jpg" class="art-img img-small center">
+    <div id="art-modal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+    <h2>“Almost Ripe, Almost Gone”</h2>
+    <div class="modal-images">
+      <img src="IMG_5327.JPG" alt="Banana Sculpture – Full View">
+      <img src="IMG_4176.jpg" alt="Banana Wound Close-Up">
+      <img src="DSCF8195(1).JPG" alt="In Progress Shot">
+    </div>
+    <p class="modal-description"><strong>Materials:</strong> Air-dry clay, thread, acrylic paint, Mod Podge (glossy & matte)</p>
+    <p class="modal-description"><strong>Medical Concept:</strong> Basic Suture Technique</p>
+    <p class="modal-description">
+      This piece exaggerates the decaying process of a banana, transforming it from an everyday object into a site of tension between healing and breakdown. 
+      The visible sutures mimic emergency repair — a desperate act of preservation on something already past its prime. 
+      It reflects the human tendency to hold onto things long after they’ve started falling apart — relationships, habits, even versions of ourselves. 
+      The contrast between glossy "freshness" inside the wound and the bruised, fading peel emphasizes this emotional conflict: the urge to save what is inevitably slipping away.
+    </p>
+  </div>
+</div>
   </section>
   <section id="about" class="about">
     <h2>About Galervia</h2>
     <p>Galervia is more than a name — it's a space for softness, story, and the study of feeling. I'm Nicole, and this is my ever-evolving archive of reflection and creation.</p>
   </section>
-
-  <section id="contact" class="contact">
-    <h2>Contact</h2>
-    <p>Connect with me on Instagram @galervia.studio or email me at <a href="mailto:youremail@example.com">youremail@example.com</a></p>
-  </section>
-
   <footer>
-    <p>© 2025 Galervia by Nicole Ariana</p>
+    <p>© 2025 Galervia by Nicole </p>
   </footer>
 </body>
 </html>
