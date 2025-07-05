@@ -229,3 +229,21 @@ footer {
 .close-btn:hover {
   color: #f6bd60;
 }
+.modal-images img {
+  max-width: 30%;      /* Limits width to 30% of modal content */
+  height: auto;        /* Keeps image proportions */
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  object-fit: cover;   /* Makes sure images fill their boxes nicely */
+}
+@media (max-width: 600px) {
+  .modal-images {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .modal-images img {
+    max-width: 80%;   /* Bigger on small screens but still contained */
+    margin-bottom: 15px;
+  }
+}
