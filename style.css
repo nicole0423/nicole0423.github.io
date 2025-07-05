@@ -247,3 +247,11 @@ footer {
     margin-bottom: 15px;
   }
 }
+.clickable-img {
+  max-width: 100%;     /* make it scale nicely */
+  height: auto;
+  cursor: pointer;     /* pointer cursor to show it’s clickable */
+  display: block;
+  margin: 0 auto;      /* center it */
+  max-width: 400px;    /* max size on desktop, adjust as needed */
+}
