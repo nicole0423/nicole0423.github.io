@@ -9,11 +9,65 @@
   <style>
     body {
       font-family: 'Fraunces', serif;
-      margin: 0; padding: 0;
+      margin: 0;
+      padding: 0;
       background: #fffefc;
       color: #333;
     }
-    /* Gallery preview image */
+
+    header {
+      background-color: #ffffff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 2rem;
+      border-bottom: 1px solid #f2c5d3;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo img {
+      height: 50px;
+      width: auto;
+    }
+
+    nav a {
+      margin-left: 25px;
+      text-decoration: none;
+      color: #d88ba0;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+
+    .hero {
+      background: #ffe8ef;
+      text-align: center;
+      padding: 6rem 2rem 4rem;
+    }
+
+    .fraunces-title {
+      font-family: 'Fraunces', serif;
+      font-size: 3.5rem;
+      letter-spacing: 1px;
+      font-weight: 600;
+      color: #f7ede2;
+      text-align: center;
+      margin-top: 60px;
+      margin-bottom: 30px;
+    }
+
+    .gallery {
+      padding: 4rem 2rem;
+      text-align: center;
+      background: #ffffff;
+    }
+
+    .art-piece {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
     .clickable-img {
       max-width: 400px;
       width: 90%;
@@ -37,6 +91,7 @@
       overflow-y: auto; 
       background-color: rgba(0, 0, 0, 0.6);
     }
+
     .modal-content {
       background-color: #fffefc;
       border: 8px solid #f9dbbd;
@@ -49,17 +104,20 @@
       box-shadow: 0 10px 25px rgba(0,0,0,0.2);
       font-family: 'Playfair Display', serif;
     }
+
     .modal-title {
       font-family: 'Fraunces', serif;
       font-size: 2rem;
       color: #F28482;
       margin-bottom: 20px;
     }
+
     .modal-description {
       font-size: 1rem;
       line-height: 1.6;
       margin-bottom: 16px;
     }
+
     .modal-images {
       display: flex;
       flex-wrap: wrap;
@@ -67,12 +125,15 @@
       justify-content: center;
       margin-bottom: 20px;
     }
+
     .modal-images img {
       max-width: 45%;
       height: auto;
       border-radius: 10px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      object-fit: cover;
     }
+
     .close-btn {
       color: #edafb8;
       float: right;
@@ -80,18 +141,48 @@
       font-weight: bold;
       cursor: pointer;
     }
+
     .close-btn:hover {
       color: #f6bd60;
     }
+
     @media (max-width: 600px) {
       .modal-images {
         flex-direction: column;
         align-items: center;
       }
+
       .modal-images img {
         max-width: 80%;
         margin-bottom: 15px;
       }
+    }
+
+    .about {
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    .about h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #c66380;
+    }
+
+    .about p {
+      max-width: 700px;
+      margin: 0 auto;
+      color: #5a4c52;
+      font-size: 1rem;
+    }
+
+    footer {
+      padding: 1rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #9b7a87;
+      background: #fff5f8;
+      margin-top: 3rem;
     }
   </style>
 </head>
@@ -149,22 +240,18 @@
   </footer>
 
   <script>
-    // Elements
     const modal = document.getElementById('art-modal');
     const img = document.querySelector('.clickable-img');
     const closeBtn = document.querySelector('.close-btn');
 
-    // Open modal on image click
     img.addEventListener('click', () => {
       modal.style.display = 'block';
     });
 
-    // Close modal on close button click
     closeBtn.addEventListener('click', () => {
       modal.style.display = 'none';
     });
 
-    // Close modal if clicking outside modal content
     window.addEventListener('click', (e) => {
       if (e.target === modal) {
         modal.style.display = 'none';
