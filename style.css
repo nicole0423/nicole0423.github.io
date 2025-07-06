@@ -1,3 +1,4 @@
+/* Fix selector for title class */
 .fraunces-title {
   font-family: 'Fraunces', serif;
   font-size: 3.5rem;
@@ -8,6 +9,7 @@
   margin-top: 60px;
   margin-bottom: 30px;
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -68,6 +70,11 @@ nav a {
   padding: 4rem 2rem;
   text-align: center;
   background: #ffffff;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 40px;
+  padding: 40px 60px;
+  position: relative;
 }
 
 .gallery h2 {
@@ -118,13 +125,6 @@ footer {
   background: #fff5f8;
   margin-top: 3rem;
 }
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 40px;
-  padding: 40px 60px;
-  position: relative;
-}
 
 .art-img {
   border-radius: 8px;
@@ -167,6 +167,8 @@ footer {
     margin-bottom: 20px;
   }
 }
+
+/* Modal styles */
 .modal {
   display: none;
   position: fixed;
@@ -196,9 +198,11 @@ footer {
 .modal-title {
   font-size: 2rem;
   margin-bottom: 20px;
+  font-family: 'Fraunces', serif;
+  color: #f28482;
 }
 
-.modal-text {
+.modal-text, .modal-description {
   font-size: 1rem;
   line-height: 1.6;
   margin-bottom: 16px;
@@ -213,9 +217,12 @@ footer {
 }
 
 .modal-images img {
-  max-width: 30%;
+  max-width: 45%;
+  height: auto;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  object-fit: cover;
+  cursor: pointer;
 }
 
 .close-btn {
@@ -229,13 +236,25 @@ footer {
 .close-btn:hover {
   color: #f6bd60;
 }
-.modal-images img {
-  max-width: 45%;      /* Limits width to 30% of modal content */
-  height: auto;        /* Keeps image proportions */
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  object-fit: cover;   /* Makes sure images fill their boxes nicely */
+
+/* Your clickable preview image */
+.clickable-img {
+  width: 100%;
+  max-width: 600px;  /* Larger max width for laptops */
+  height: auto;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto 40px;
 }
+
+/* Media queries for smaller screens */
+@media (max-width: 900px) {
+  .clickable-img {
+    max-width: 90%;
+    margin-bottom: 20px;
+  }
+}
+
 @media (max-width: 600px) {
   .modal-images {
     flex-direction: column;
@@ -243,15 +262,7 @@ footer {
   }
 
   .modal-images img {
-    max-width: 80%;   /* Bigger on small screens but still contained */
+    max-width: 80%;
     margin-bottom: 15px;
   }
-}
-.clickable-img {
-  max-width: 100%;     /* make it scale nicely */
-  height: auto;
-  cursor: pointer;     /* pointer cursor to show it’s clickable */
-  display: block;
-  margin: 0 auto;      /* center it */
-  max-width: 400px;    /* max size on desktop, adjust as needed */
 }
