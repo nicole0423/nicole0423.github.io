@@ -1,4 +1,4 @@
-/* Fix selector for title class */
+/* Title with Fraunces font */
 .fraunces-title {
   font-family: 'Fraunces', serif;
   font-size: 3.5rem;
@@ -35,8 +35,15 @@ header {
   z-index: 1000;
 }
 
+/* Logo container limits size */
+.logo {
+  max-width: 150px;
+}
+
 .logo img {
-  height: 50px;
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 nav a {
@@ -184,22 +191,22 @@ footer {
 
 .modal-content {
   background-color: #fffefc;
-  border: 8px solid #f9dbbd;
-  color: #edafb8;
+  border: 8px solid #f9dbbd;  /* very light yellow border */
+  color: #edafb8;             /* pink text */
   margin: auto;
   padding: 30px;
   border-radius: 16px;
   width: 90%;
   max-width: 650px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', serif;  /* font only for modal text */
 }
 
 .modal-title {
   font-size: 2rem;
   margin-bottom: 20px;
-  font-family: 'Fraunces', serif;
-  color: #f28482;
+  font-family: 'Fraunces', serif;   /* Title keeps Fraunces */
+  color: #f28482;                   /* pinkish color for modal title */
 }
 
 .modal-text, .modal-description {
@@ -237,17 +244,17 @@ footer {
   color: #f6bd60;
 }
 
-/* Your clickable preview image */
+/* Clickable main preview image */
 .clickable-img {
   width: 100%;
-  max-width: 600px;  /* Larger max width for laptops */
+  max-width: 600px;
   height: auto;
   cursor: pointer;
   display: block;
   margin: 0 auto 40px;
 }
 
-/* Media queries for smaller screens */
+/* Responsive adjustments */
 @media (max-width: 900px) {
   .clickable-img {
     max-width: 90%;
