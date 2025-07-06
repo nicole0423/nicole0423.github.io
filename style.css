@@ -1,4 +1,3 @@
-/* Title with Fraunces font */
 .fraunces-title {
   font-family: 'Fraunces', serif;
   font-size: 3.5rem;
@@ -9,7 +8,6 @@
   margin-top: 60px;
   margin-bottom: 30px;
 }
-
 * {
   margin: 0;
   padding: 0;
@@ -35,15 +33,8 @@ header {
   z-index: 1000;
 }
 
-/* Logo container limits size */
-.logo {
-  max-width: 150px;
-}
-
 .logo img {
-  max-width: 100%;
-  height: auto;
-  display: block;
+  height: 50px;
 }
 
 nav a {
@@ -77,11 +68,6 @@ nav a {
   padding: 4rem 2rem;
   text-align: center;
   background: #ffffff;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 40px;
-  padding: 40px 60px;
-  position: relative;
 }
 
 .gallery h2 {
@@ -132,6 +118,13 @@ footer {
   background: #fff5f8;
   margin-top: 3rem;
 }
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 40px;
+  padding: 40px 60px;
+  position: relative;
+}
 
 .art-img {
   border-radius: 8px;
@@ -174,8 +167,6 @@ footer {
     margin-bottom: 20px;
   }
 }
-
-/* Modal styles */
 .modal {
   display: none;
   position: fixed;
@@ -191,25 +182,23 @@ footer {
 
 .modal-content {
   background-color: #fffefc;
-  border: 8px solid #f9dbbd;  /* very light yellow border */
-  color: #edafb8;             /* pink text */
+  border: 8px solid #f9dbbd;
+  color: #edafb8;
   margin: auto;
   padding: 30px;
   border-radius: 16px;
   width: 90%;
   max-width: 650px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-  font-family: 'Playfair Display', serif;  /* font only for modal text */
+  font-family: 'Playfair Display', serif;
 }
 
 .modal-title {
   font-size: 2rem;
   margin-bottom: 20px;
-  font-family: 'Fraunces', serif;   /* Title keeps Fraunces */
-  color: #f28482;                   /* pinkish color for modal title */
 }
 
-.modal-text, .modal-description {
+.modal-text {
   font-size: 1rem;
   line-height: 1.6;
   margin-bottom: 16px;
@@ -224,12 +213,9 @@ footer {
 }
 
 .modal-images img {
-  max-width: 45%;
-  height: auto;
+  max-width: 30%;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  object-fit: cover;
-  cursor: pointer;
 }
 
 .close-btn {
@@ -243,25 +229,13 @@ footer {
 .close-btn:hover {
   color: #f6bd60;
 }
-
-/* Clickable main preview image */
-.clickable-img {
-  width: 100%;
-  max-width: 600px;
-  height: auto;
-  cursor: pointer;
-  display: block;
-  margin: 0 auto 40px;
+.modal-images img {
+  max-width: 45%;      /* Limits width to 30% of modal content */
+  height: auto;        /* Keeps image proportions */
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  object-fit: cover;   /* Makes sure images fill their boxes nicely */
 }
-
-/* Responsive adjustments */
-@media (max-width: 900px) {
-  .clickable-img {
-    max-width: 90%;
-    margin-bottom: 20px;
-  }
-}
-
 @media (max-width: 600px) {
   .modal-images {
     flex-direction: column;
@@ -269,7 +243,15 @@ footer {
   }
 
   .modal-images img {
-    max-width: 80%;
+    max-width: 80%;   /* Bigger on small screens but still contained */
     margin-bottom: 15px;
   }
+}
+.clickable-img {
+  max-width: 100%;     /* make it scale nicely */
+  height: auto;
+  cursor: pointer;     /* pointer cursor to show it’s clickable */
+  display: block;
+  margin: 0 auto;      /* center it */
+  max-width: 400px;    /* max size on desktop, adjust as needed */
 }
