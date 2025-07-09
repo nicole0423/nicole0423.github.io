@@ -181,7 +181,9 @@
   </style>
 </head>
 <body>
-
+<div id="welcome-screen">
+  <h1 class="welcome-text">Welcome to Galervia</h1>
+</div>
   <header>
     <div class="logo">
       <img src="logo.png" alt="Galervia Logo" />
@@ -191,6 +193,14 @@
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
     </nav>
+    <script>
+  window.addEventListener("load", function () {
+    const welcome = document.getElementById("welcome-screen");
+    setTimeout(() => {
+      welcome.classList.add("hide");
+    }, 3000); // fades out after 3 seconds
+  });
+</script>
   </header>
 
   <section class="hero">
