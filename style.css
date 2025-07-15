@@ -1,48 +1,46 @@
-/* Reset & Base Styles */
+/* RESET + BASE */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Helvetica Neue', sans-serif;
 }
+body {
+  font-family: 'Playfair Display', serif;
+  background-color: #fffefc;
+  color: #333;
+}
+
+/* WELCOME SCREEN */
 #welcome-screen {
   position: fixed;
   top: 0; left: 0;
   width: 100%;
   height: 100%;
-  background-color: #ffe2ec;
+  background-color: #fce3dc;
   z-index: 9999;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: opacity 0.6s ease;
+  transition: opacity 1.5s ease;
 }
-
 #welcome-screen.hide {
   opacity: 0;
   pointer-events: none;
 }
-
 .welcome-text {
   font-family: 'Fraunces', serif;
-  font-size: 3rem;
-  color: #f54e8e;
-  animation: popIn 1s ease-in-out;
+  font-size: 4rem;
+  color: #d96c6c;
+  animation: fadeOut 2s ease 1.5s forwards;
 }
-
-@keyframes popIn {
-  0% {
+@keyframes fadeOut {
+  to {
     opacity: 0;
-    transform: scale(0.9);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
+    transform: translateY(-20px);
   }
 }
 
-
-/* Header */
+/* HEADER */
 header {
   background-color: #ffffff;
   display: flex;
@@ -53,50 +51,10 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000;
-  <style>
-  #welcome-screen {
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #ffe2ec;
-    z-index: 9999;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: opacity 0.6s ease;
-  }
-
-  #welcome-screen.hide {
-    opacity: 0;
-    pointer-events: none;
-  }
-
-  .welcome-text {
-    font-family: 'Fraunces', serif;
-    font-size: 3rem;
-    color: #d95873;
-    animation: popIn 1s ease-in-out;
-  }
-
-  @keyframes popIn {
-    0% {
-      opacity: 0;
-      transform: scale(0.9);
-    }
-    100% {
-      opacity: 1;
-      transform: scale(1);
-    }
-  }
-</style>
-
 }
-
 .logo img {
   height: 50px;
 }
-
 nav a {
   margin-left: 25px;
   text-decoration: none;
@@ -105,113 +63,56 @@ nav a {
   font-size: 1rem;
 }
 
-/* Hero */
-.hero {
-  background: #ffe8ef;
-  text-align: center;
-  padding: 6rem 2rem 4rem;
-}
-
-.hero h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  color: #c66380;
-}
-
-/* Title Font */
-.fraunces-title {
-  font-family: 'Fraunces', serif;
-  font-size: 3.5rem;
-  letter-spacing: 1px;
-  font-weight: 600;
-  color: #f7ede2;
-  text-align: center;
-  margin-top: 60px;
-  margin-bottom: 30px;
-}
-
-/* Gallery Layout */
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 40px;
-  padding: 40px 60px;
+/* EDITORIAL GALLERY */
+.gallery-editorial {
   background: #ffffff;
-  position: relative;
+  padding: 5rem 8vw;
 }
-
-.art-img {
-  border-radius: 8px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease;
+.art-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+  gap: 60px;
+}
+.image-col img {
   width: 100%;
-  height: auto;
+  max-width: 500px;
+  border-radius: 10px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
-
-.art-img:hover {
-  transform: scale(1.03);
+.image-col img:hover {
+  transform: scale(1.02);
 }
-
-/* Placement styles */
-.img-large {
-  grid-column: 1 / span 7;
-  grid-row: 1;
+.text-col {
+  padding-top: 1.5rem;
+  font-family: 'Playfair Display', serif;
 }
-
-.img-medium {
-  grid-column: 6 / span 6;
-  grid-row: 2;
-  margin-top: 40px;
-}
-
-.img-small {
-  grid-column: 3 / span 4;
-  grid-row: 3;
-}
-
-/* Responsive for mobile */
-@media screen and (max-width: 768px) {
-  .gallery {
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-  }
-
-  .art-img {
-    margin-bottom: 20px;
-  }
-}
-
-/* About & Contact */
-.about, .contact {
-  padding: 4rem 2rem;
-  text-align: center;
-}
-
-.about h2, .contact h2 {
+.art-title {
   font-size: 2rem;
-  margin-bottom: 1rem;
   color: #c66380;
+  margin-bottom: 1rem;
+}
+.art-snippet {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 450px;
 }
 
-.about p, .contact p {
-  max-width: 700px;
-  margin: 0 auto;
-  color: #5a4c52;
-  font-size: 1rem;
+@media screen and (max-width: 768px) {
+  .art-grid {
+    grid-template-columns: 1fr;
+  }
+  .text-col {
+    text-align: center;
+  }
+  .image-col img {
+    margin: 0 auto;
+  }
 }
 
-/* Footer */
-footer {
-  padding: 1rem;
-  text-align: center;
-  font-size: 0.9rem;
-  color: #9b7a87;
-  background: #fff5f8;
-  margin-top: 3rem;
-}
-
-/* Modal */
+/* MODAL */
 .modal {
   display: none;
   position: fixed;
@@ -224,7 +125,6 @@ footer {
   overflow-y: auto;
   background-color: rgba(0, 0, 0, 0.6);
 }
-
 .modal-content {
   background-color: #fffefc;
   border: 8px solid #f9dbbd;
@@ -237,18 +137,16 @@ footer {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
   font-family: 'Playfair Display', serif;
 }
-
 .modal-title {
   font-size: 2rem;
   margin-bottom: 20px;
+  color: #F28482;
 }
-
 .modal-description {
   font-size: 1rem;
   line-height: 1.6;
   margin-bottom: 16px;
 }
-
 .modal-images {
   display: flex;
   flex-wrap: wrap;
@@ -256,7 +154,6 @@ footer {
   margin-bottom: 20px;
   justify-content: center;
 }
-
 .modal-images img {
   max-width: 45%;
   border-radius: 10px;
@@ -264,19 +161,16 @@ footer {
   object-fit: cover;
   height: auto;
 }
-
 @media (max-width: 600px) {
   .modal-images {
     flex-direction: column;
     align-items: center;
   }
-
   .modal-images img {
     max-width: 80%;
     margin-bottom: 15px;
   }
 }
-
 .close-btn {
   color: #edafb8;
   float: right;
@@ -284,51 +178,31 @@ footer {
   font-weight: bold;
   cursor: pointer;
 }
-
 .close-btn:hover {
   color: #f6bd60;
 }
 
-.clickable-img {
-  max-width: 400px;
-  width: 100%;
-  height: auto;
-  cursor: pointer;
-  display: block;
+/* ABOUT + FOOTER */
+.about {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+.about h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #c66380;
+}
+.about p {
+  max-width: 700px;
   margin: 0 auto;
+  color: #5a4c52;
+  font-size: 1rem;
 }
-/* Welcome Screen Styles */
-#welcome-screen {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #fce3dc; /* soft warm pink, distinct from main bg */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 9999;
-  transition: opacity 1.5s ease;
+footer {
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #9b7a87;
+  background: #fff5f8;
+  margin-top: 3rem;
 }
-
-.welcome-text {
-  font-family: 'Fraunces', serif;
-  font-size: 4rem;
-  color: #d96c6c; /* dreamy rose pink */
-  opacity: 1;
-  animation: fadeOut 2s ease 1.5s forwards;
-}
-
-@keyframes fadeOut {
-  to {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-}
-
-#welcome-screen.hide {
-  opacity: 0;
-  pointer-events: none;
-}
-
