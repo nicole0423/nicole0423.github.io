@@ -6,181 +6,16 @@
   <title>Galervia</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon"/>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces&family=Playfair+Display&display=swap" rel="stylesheet" />
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-
-    }
-
-    header {
-      background-color: #ffffff;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1.2rem 2rem;
-      border-bottom: 1px solid #f2c5d3;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    .logo img {
-      height: 50px;
-      width: auto;
-    }
-
-    nav a {
-      margin-left: 25px;
-      text-decoration: none;
-      color: #d88ba0;
-      font-weight: 600;
-      font-size: 1rem;
-    }
-
-    .hero {
-      background: #ffe8ef;
-      text-align: center;
-      padding: 5rem 2rem 3rem;
-    }
-
-    .fraunces-title {
-      font-family: 'Fraunces', serif;
-      font-size: 3.5rem;
-      color: #d88ba0;
-    }
-
-    .gallery {
-      padding: 4rem 2rem;
-      text-align: center;
-      background: #ffffff;
-    }
-
-    .clickable-img {
-      max-width: 400px;
-      width: 90%;
-      height: auto;
-      display: block;
-      margin: 0 auto 40px;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      cursor: pointer;
-    }
-
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 100;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      overflow-y: auto;
-      background-color: rgba(0, 0, 0, 0.6);
-    }
-
-    .modal-content {
-      background-color: #fffefc;
-      border: 8px solid #f9dbbd;
-      color: #edafb8;
-      margin: 80px auto;
-      padding: 30px;
-      border-radius: 16px;
-      width: 90%;
-      max-width: 650px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-      font-family: 'Playfair Display', serif;
-    }
-
-    .modal-title {
-      font-family: 'Fraunces', serif;
-      font-size: 2rem;
-      color: #F28482;
-      margin-bottom: 20px;
-    }
-
-    .modal-description {
-      font-size: 1rem;
-      line-height: 1.6;
-      margin-bottom: 16px;
-    }
-
-    .modal-images {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      justify-content: center;
-      margin-bottom: 20px;
-    }
-
-    .modal-images img {
-      max-width: 45%;
-      height: auto;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      object-fit: cover;
-    }
-
-    .close-btn {
-      color: #edafb8;
-      float: right;
-      font-size: 28px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    .close-btn:hover {
-      color: #f6bd60;
-    }
-
-    @media (max-width: 600px) {
-      .modal-images {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .modal-images img {
-        max-width: 80%;
-        margin-bottom: 15px;
-      }
-    }
-
-    .about {
-      padding: 4rem 2rem;
-      text-align: center;
-    }
-
-    .about h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      color: #c66380;
-    }
-
-    .about p {
-      max-width: 700px;
-      margin: 0 auto;
-      color: #5a4c52;
-      font-size: 1rem;
-    }
-
-    footer {
-      padding: 1rem;
-      text-align: center;
-      font-size: 0.9rem;
-      color: #9b7a87;
-      background: #fff5f8;
-      margin-top: 3rem;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<div id="welcome-screen">
-  <h1 class="welcome-text">Welcome to Galervia</h1>
-</div>
+
+  <!-- Splash Welcome Screen -->
+  <div id="welcome-screen">
+    <h1 class="welcome-text">Welcome to Galervia</h1>
+  </div>
+
+  <!-- Header -->
   <header>
     <div class="logo">
       <img src="logo.png" alt="Galervia Logo" />
@@ -192,15 +27,18 @@
     </nav>
   </header>
 
-  <section class="hero">
-    <section class="hero">
-  <h1 class="fraunces-title">Welcome to Galervia</h1>
-</section>
-
-
-  <section id="gallery" class="gallery">
-    <div class="art-piece">
-      <img src="IMG_5327.JPG" alt="Almost Ripe, Almost Gone" class="clickable-img" />
+  <!-- Editorial Gallery Section -->
+  <section id="gallery" class="gallery-editorial">
+    <div class="art-grid">
+      <div class="image-col">
+        <img src="IMG_5327.JPG" alt="Almost Ripe, Almost Gone" class="clickable-img" />
+      </div>
+      <div class="text-col">
+        <h2 class="art-title">Almost Ripe, Almost Gone</h2>
+        <p class="art-snippet">
+          A reflection on healing, breakdown, and the quiet urgency to preserve what's slipping away. 🍌🩹
+        </p>
+      </div>
     </div>
   </section>
 
@@ -213,6 +51,7 @@
         <img src="IMG_5327.JPG" alt="Banana Sculpture – Full View" />
         <img src="IMG_4176.jpg" alt="Banana Wound Close-Up" />
         <img src="DSCF8195 (1).JPG" alt="In Progress Shot" />
+        <!-- Add more images here if you want -->
       </div>
       <p class="modal-description"><strong>Materials:</strong> Air-dry clay, thread, acrylic paint, Mod Podge (glossy & matte)</p>
       <p class="modal-description"><strong>Medical Concept:</strong> Basic Suture Technique</p>
@@ -225,15 +64,18 @@
     </div>
   </div>
 
+  <!-- About Section -->
   <section id="about" class="about">
     <h2>About Galervia</h2>
     <p>Galervia is more than a name — it's a space for softness, story, and the study of feeling. I'm Nicole, and this is my ever-evolving archive of reflection and creation.</p>
   </section>
 
+  <!-- Footer -->
   <footer>
     <p>© 2025 Galervia by Nicole</p>
   </footer>
 
+  <!-- Scripts -->
   <script>
     const modal = document.getElementById('art-modal');
     const img = document.querySelector('.clickable-img');
@@ -252,11 +94,12 @@
         modal.style.display = 'none';
       }
     });
-     window.addEventListener("load", function () {
+
+    window.addEventListener("load", function () {
       const welcome = document.getElementById("welcome-screen");
       setTimeout(() => {
         welcome.classList.add("hide");
-      }, 2000); // fades out after 2 seconds
+      }, 2000);
     });
   </script>
 </body>
