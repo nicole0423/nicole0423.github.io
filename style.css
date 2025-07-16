@@ -62,7 +62,7 @@ nav a {
   font-size: 1rem;
 }
 
-/* Editorial Gallery Layout */
+/* Gallery Layout */
 .gallery-editorial {
   background: #ffffff;
   padding: 5rem 8vw;
@@ -104,7 +104,6 @@ nav a {
   max-width: 450px;
 }
 
-/* Responsive */
 @media screen and (max-width: 768px) {
   .art-grid {
     grid-template-columns: 1fr;
