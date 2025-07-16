@@ -206,3 +206,9 @@ footer {
   background: #fff5f8;
   margin-top: 3rem;
 }
+.art-grid.reverse {
+  direction: rtl;
+}
+.art-grid.reverse > * {
+  direction: ltr;
+}
