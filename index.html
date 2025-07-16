@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Galervia</title>
-  <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces&family=Playfair+Display&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -27,37 +27,56 @@
     </nav>
   </header>
 
-  <!-- Editorial Gallery Section -->
+  <!-- Banana: Image Left -->
   <section id="gallery" class="gallery-editorial">
     <div class="art-grid">
       <div class="image-col">
-        <img src="IMG_5327.JPG" alt="Almost Ripe, Almost Gone" class="clickable-img" />
+        <img src="IMG_5327.JPG" alt="Almost Ripe, Almost Gone" class="clickable-img" data-modal="modal-1" />
       </div>
       <div class="text-col">
-        <h2 class="art-title">Almost Ripe, Almost Gone</h2>
+        <h2 class="art-title">“Almost Ripe, Almost Gone”</h2>
         <p class="art-snippet">
-          A reflection on healing, breakdown, and the quiet urgency to preserve what's slipping away. 🍌🩹
+          A delicate reflection on healing & decay using everyday materials and medical concepts. 🍌🩹
         </p>
       </div>
     </div>
   </section>
-  <section class="gallery-editorial">
-  <div class="art-grid reverse">
-    <div class="text-col">
-      <h2 class="art-title">“Cut to Fit”</h2>
-      <p class="art-snippet">
-        Confronts the silent expectations placed on the female body — reshaped, revised, and prepared without consent. 
-        The classical form remains still, but the surgical marks tell a story of imposed transformation masked as perfection.
-      </p>
-    </div>
-    <div class="image-col">
-      <img src="painting front 2.JPG" alt="Cut to Fit" class="clickable-img" data-modal="modal-3" />
-    </div>
-  </div>
-</section>
 
-  <!-- Modal -->
-  <div id="art-modal" class="modal">
+  <!-- Bloom: Image Right -->
+  <section class="gallery-editorial">
+    <div class="art-grid reverse">
+      <div class="text-col">
+        <h2 class="art-title">“Tangled Bloom”</h2>
+        <p class="art-snippet">
+          A soft exploration of fragility and entanglement. Paper flowers in delicate tension, sewn together with red thread.
+        </p>
+      </div>
+      <div class="image-col">
+        <img src="YOUR-IMAGE-2.JPG" alt="Tangled Bloom" class="clickable-img" data-modal="modal-2" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Cut to Fit: Image Right -->
+  <section class="gallery-editorial">
+    <div class="art-grid reverse">
+      <div class="text-col">
+        <h2 class="art-title">“Cut to Fit”</h2>
+        <p class="art-snippet">
+          Confronts the silent expectations placed on the female body — reshaped, revised, and prepared without consent.
+          The classical form remains still, but the surgical marks tell a story of imposed transformation masked as perfection.
+        </p>
+      </div>
+      <div class="image-col">
+        <img src="painting front 2.JPG" alt="Cut to Fit" class="clickable-img" data-modal="modal-3" />
+      </div>
+    </div>
+  </section>
+
+  <!-- MODALS -->
+
+  <!-- Banana Modal -->
+  <div id="modal-1" class="modal">
     <div class="modal-content">
       <span class="close-btn">&times;</span>
       <h2 class="modal-title">“Almost Ripe, Almost Gone”</h2>
@@ -65,79 +84,93 @@
         <img src="IMG_5327.JPG" alt="Banana Sculpture – Full View" />
         <img src="IMG_4176.jpg" alt="Banana Wound Close-Up" />
         <img src="DSCF8195 (1).JPG" alt="In Progress Shot" />
-        <!-- Add more images here if you want -->
       </div>
       <p class="modal-description"><strong>Materials:</strong> Air-dry clay, thread, acrylic paint, Mod Podge (glossy & matte)</p>
       <p class="modal-description"><strong>Medical Concept:</strong> Basic Suture Technique</p>
       <p class="modal-description">
-        This piece exaggerates the decaying process of a banana, transforming it from an everyday object into a site of tension between healing and breakdown. 
-        The visible sutures mimic emergency repair — a desperate act of preservation on something already past its prime. 
-        It reflects the human tendency to hold onto things long after they’ve started falling apart — relationships, habits, even versions of ourselves. 
-        The contrast between glossy "freshness" inside the wound and the bruised, fading peel emphasizes this emotional conflict: the urge to save what is inevitably slipping away.
+        This piece exaggerates the decaying process of a banana, transforming it from an everyday object into a site of tension between healing and breakdown.
       </p>
     </div>
   </div>
-  <div id="modal-3" class="modal">
-  <div class="modal-content">
-    <span class="close-btn">&times;</span>
-    <h2 class="modal-title">“Cut to Fit”</h2>
-    <div class="modal-images">
-      <img src="painting front 2.JPG" alt="Front View" />
-      <img src="painting side 2.JPG" alt="Side View" />
-    </div>
-    <p class="modal-description"><strong>Materials:</strong> Acrylic and canvas</p>
-    <p class="modal-description">
-      “Cut to Fit” explores the deeply personal decision to alter one’s body — not out of shame, but through the desire to reclaim control and redefine beauty on one’s own terms. 
-      The classical form, paired with clinical markings and surgical tools, reflects the intersection between timeless ideals and modern modification. 
-      Flat, deliberate strokes emphasize that this transformation isn’t hidden — it’s intentional, visible, and unapologetically constructed. 
-      This piece is not a critique of plastic surgery, but a reflection on how choosing to change can be both empowering and vulnerable — 
-      a statement of identity shaped by the self, not the standard.
-    </p>
-  </div>
-</div>
 
-  <!-- About Section -->
+  <!-- Tangled Bloom Modal -->
+  <div id="modal-2" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h2 class="modal-title">“Tangled Bloom”</h2>
+      <div class="modal-images">
+        <img src="YOUR-IMAGE-2.JPG" alt="Tangled Bloom – View 1" />
+        <img src="ANOTHER-IMAGE.JPG" alt="Close-up" />
+      </div>
+      <p class="modal-description"><strong>Materials:</strong> Hand-dyed paper, embroidery thread, tulle, glue</p>
+      <p class="modal-description">
+        Exploring themes of emotional vulnerability, "Tangled Bloom" interlaces fragile materials into knotted compositions.
+      </p>
+    </div>
+  </div>
+
+  <!-- Cut to Fit Modal -->
+  <div id="modal-3" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h2 class="modal-title">“Cut to Fit”</h2>
+      <div class="modal-images">
+        <img src="painting front 2.JPG" alt="Front View" />
+        <img src="painting side 2.JPG" alt="Side View" />
+      </div>
+      <p class="modal-description"><strong>Materials:</strong> Acrylic and canvas</p>
+      <p class="modal-description">
+        “Cut to Fit” explores the deeply personal decision to alter one’s body — not out of shame, but through the desire to reclaim control and redefine beauty on one’s own terms.
+      </p>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
   <section id="about" class="about">
     <h2>About Galervia</h2>
     <p>Galervia is more than a name — it's a space for softness, story, and the study of feeling. I'm Nicole, and this is my ever-evolving archive of reflection and creation.</p>
   </section>
 
-  <!-- Footer -->
+  <!-- FOOTER -->
   <footer>
     <p>© 2025 Galervia by Nicole</p>
   </footer>
 
-  <!-- Scripts -->
- <script>
-  const modals = document.querySelectorAll('.modal');
-  const clickableImages = document.querySelectorAll('.clickable-img');
-  const closeButtons = document.querySelectorAll('.close-btn');
+  <!-- SCRIPT -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const clickableImages = document.querySelectorAll('.clickable-img');
+      clickableImages.forEach(img => {
+        img.addEventListener('click', () => {
+          const modalId = img.dataset.modal;
+          const modal = document.getElementById(modalId);
+          if (modal) {
+            modal.style.display = 'block';
+          }
+        });
+      });
 
-  clickableImages.forEach(img => {
-    img.addEventListener('click', () => {
-      const targetId = img.dataset.modal;
-      document.getElementById(targetId).style.display = 'block';
+      const closeButtons = document.querySelectorAll('.close-btn');
+      closeButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          btn.closest('.modal').style.display = 'none';
+        });
+      });
+
+      window.addEventListener('click', (e) => {
+        const modals = document.querySelectorAll('.modal');
+        modals.forEach(modal => {
+          if (e.target === modal) {
+            modal.style.display = 'none';
+          }
+        });
+      });
+
+      const welcome = document.getElementById("welcome-screen");
+      setTimeout(() => {
+        welcome.classList.add("hide");
+      }, 2000);
     });
-  });
-
-  closeButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      modals.forEach(modal => modal.style.display = 'none');
-    });
-  });
-
-  window.addEventListener('click', (e) => {
-    modals.forEach(modal => {
-      if (e.target === modal) modal.style.display = 'none';
-    });
-  });
-
-  window.addEventListener("load", function () {
-    const welcome = document.getElementById("welcome-screen");
-    setTimeout(() => {
-      welcome.classList.add("hide");
-    }, 2000);
-  });
-</script>
+  </script>
 </body>
 </html>
